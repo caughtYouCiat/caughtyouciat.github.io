@@ -227,7 +227,7 @@ body {
 #container {
   color:#999;
   text-transform: uppercase;
-  font-size:16px;
+
   font-weight:bold;
   padding-top:200px;  
   position:fixed;
@@ -239,15 +239,15 @@ body {
 }
 
 #flip {
-  height:25px;
+    font-size:55px;
+  height:80px;
   overflow:hidden;
 }
 
 #flip > div > div {
   color:#fff;
-  padding:2px 12px;
-  height:45px;
-  margin-bottom:45px;
+  padding:10px 25px;
+  height:80px;
   display:inline-block;
 }
 
@@ -289,22 +289,21 @@ body {
 
   <div class="play" data-splitting>STX</div>
   <div class="time">
-    --:--
+     <span id="minutes">00</span>:<span id="seconds">00</span>
   </div>
   <div id=container>
-  
+    <h1>Tomamos el control de su empresa</h1> 
     <div id=flip>
       <div><div>Sybven & Soluciones Laser</div></div>
+      <div><div>You</div></div>   
       <div><div>I caught</div></div>   
     </div>
-    Tomamos el control de su empresa
+    
   </div>
   <div id="recordSpeed" class="recordSpeed">
     <div id="countdown">
       <span id="days">0</span> días
       <span id="hours">0</span> horas
-      <span id="minutes">0</span> minutos
-      <span id="seconds">0</span> segundos
     </div>
   </div>
 </div>
