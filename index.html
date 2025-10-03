@@ -49,7 +49,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   z-index: 400;
   opacity: .8;
@@ -82,7 +82,7 @@ body {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   pointer-events: none;
   z-index: 300;
   opacity: .6;
@@ -112,7 +112,7 @@ body {
   color: $white;
   font-size: 1rem;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   background: #181b34;
 
   .noise {
@@ -227,27 +227,26 @@ body {
 #container {
   color:#999;
   text-transform: uppercase;
-
   font-weight:bold;
   padding-top:200px;  
   position:fixed;
   width:100%;
   /*bottom:45%;*/
   display:block;
-    font-family:'Roboto';
+  font-family:'Roboto';
   text-align:center;
 }
 
 #flip {
-    font-size:55px;
-  height:80px;
+  height:70px;
   overflow:hidden;
 }
 
 #flip > div > div {
   color:#fff;
-  padding:10px 25px;
-  height:80px;
+  font-size:55px;
+  padding:0px 25px;
+  height:70px;
   display:inline-block;
 }
 
@@ -256,16 +255,37 @@ body {
 }
 
 #flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
   background:#4ec7f3;
 }
-#flip div:last-child div {
-  background:#DC143C;
-}
+#flip div:first-child div {
 
+     background:#DC143C;
+}
+#flip div:last-child div {
+   background:#42c58a;
+}
 @keyframes show {
+  0% {margin-top:0px;}
+  10% {margin-top:0px;}
+  20% {margin-top:-15px;}
+  40% {margin-top:-35px;}
+  60% {margin-top:-35px;}
+  80% {margin-top:-15px;}
+  90% {margin-top:0px;}
+  100% {margin-top:0px;}
+}
+/*@keyframes show {
+  0% {margin-top:-120px;}
+  5% {margin-top:-80px;}
+  33% {margin-top:-80px;}
+  38% {margin-top:-40px;}
+  66% {margin-top:-40px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-120px;}
+
+
+  @keyframes show {
   0% {margin-top:-270px;}
   5% {margin-top:-180px;}
   33% {margin-top:-180px;}
@@ -275,7 +295,32 @@ body {
   99.99% {margin-top:0px;}
   100% {margin-top:-270px;}
 }
-
+}*/
+@media screen and (max-width: 480px) {
+  h1{
+    font-size:25px;
+  }
+  #flip {
+    height:40px;
+    overflow:hidden;
+  }
+  #flip > div > div {
+    font-size:20px;
+    padding:5px 25px;
+    height:40px;
+    display:inline-block;
+  }
+  @keyframes show {
+     0% {margin-top:0px;}
+    10% {margin-top:0px;}
+    20% {margin-top:-15px;}
+    40% {margin-top:-75px;}
+    60% {margin-top:-75px;}
+    80% {margin-top:-15px;}
+    90% {margin-top:0px;}
+    100% {margin-top:0px;}
+  }
+}
 
 
 	</style>
@@ -289,21 +334,19 @@ body {
 
   <div class="play" data-splitting>STX</div>
   <div class="time">
-     <span id="minutes">00</span>:<span id="seconds">00</span>
+     <span id="days">00</span>d<span id="hours">00</span>h<span id="minutes">00</span>m<span id="seconds">00</span>s
   </div>
   <div id=container>
     <h1>Tomamos el control de su empresa</h1> 
     <div id=flip>
-      <div><div>Sybven & Soluciones Laser</div></div>
-      <div><div>You</div></div>   
-      <div><div>I caught</div></div>   
+      <div><div>I caught</div></div>  
+      <div><div>You</div></div>  
+      <div><div>Sybven & Soluciones Laser</div></div> 
     </div>
     
   </div>
   <div id="recordSpeed" class="recordSpeed">
     <div id="countdown">
-      <span id="days">0</span> días
-      <span id="hours">0</span> horas
     </div>
   </div>
 </div>
@@ -335,18 +378,6 @@ body {
         document.getElementById('minutes').innerHTML = (minutes < 10) ? '0' + minutes : minutes;
         document.getElementById('seconds').innerHTML = (seconds < 10) ? '0' + seconds : seconds;
   }
-    // let miElemento = document.getElementById("recordSpeed");
-    // let tiempoRestante = 60; // Tiempo inicial en segundos
-    // const temporizadorId = setInterval(() => {
-    //   if (tiempoRestante <= 0) {
-    //       clearInterval(temporizadorId); // Detener el temporizador
-    //       console.log("¡Tiempo terminado!");
-    //       return; // Salir de la función
-    //   }
-    //   miElemento.innerHTML = tiempoRestante;
-    //   //console.log(`Tiempo restante: ${tiempoRestante} segundos`);
-    //   tiempoRestante--; // Disminuir el tiempo
-    // }, 1000); 
   </script>
 </footer>
 </html>
