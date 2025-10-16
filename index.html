@@ -62,7 +62,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('https://ice-creme.de/images/background-noise.png');
     pointer-events: none;
   }
 
@@ -254,15 +253,6 @@ body {
   animation: show 5s linear infinite;
 }
 
-#flip div div {
-  background:#2494a3;
-}
-#flip div:first-child div {
-  background:#f20c2e;
-}
-#flip div:last-child div {
-   background:#f26419;
-}
 @keyframes show {
   0% {margin-top:0px;}
   10% {margin-top:0px;}
@@ -273,28 +263,7 @@ body {
   90% {margin-top:0px;}
   100% {margin-top:0px;}
 }
-/*@keyframes show {
-  0% {margin-top:-120px;}
-  5% {margin-top:-80px;}
-  33% {margin-top:-80px;}
-  38% {margin-top:-40px;}
-  66% {margin-top:-40px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-120px;}
 
-
-  @keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
-}
-}*/
 @media screen and (max-width: 480px) {
   h1{
     font-size:25px;
@@ -525,13 +494,11 @@ body {
   <div id=container>
     <h1>Tomamos el control de tu empresa</h1> 
     <div id=flip>
-      <div><div>I caught</div></div>  
-      <div><div>You</div></div>  
-      <div><div>Sybven & Soluciones Laser</div></div> 
+      <div><div style="background: #f20c2e">I caught</div></div>  
+      <div><div style="background: #2494a3">You</div></div>  
+      <div><div style="background: #f26419">Sybven & Soluciones Laser</div></div> 
     </div>
-
-
-    
+    <h2>Si estás del lado correcto de la historia,<br>sígueme en Ig: @ese.t.x</h2>
   </div>
   <div id="load">
   <div>G</div>
@@ -541,8 +508,6 @@ body {
   <div>A</div>
   <div>O</div>
   <div>L</div>
-
-  
 </div> 
   <div id="recordSpeed" class="recordSpeed">
     <div id="countdown">
