@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,21 +8,16 @@
 	<style>
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
-$dark: #270245;
-$light: #fd5d8d;
-$white: #fff;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
-
-  &::selection {
-    background: $light;
-    color: darken($light, 20);
-    color: $dark;
+html {
+    color-scheme: light;
   }
+  
+  @media (prefers-color-scheme: dark) {
+    html {
+      background-color: #181b34;
+    }
 }
+
 
 
 
