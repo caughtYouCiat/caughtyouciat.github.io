@@ -107,7 +107,6 @@ body {
   font-size: 1rem;
   width: 100vw;
   height: 100vh;
-  /*background: #181b34;*/
 }
 
   .noise {
@@ -242,6 +241,10 @@ body {
   padding:0px 25px;
   height:70px;
   display:inline-block;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 #flip div:first-child {
@@ -265,7 +268,6 @@ body {
   }
   #flip {
     height:40px;
-    overflow:hidden;
   }
   #flip > div > div {
     font-size:20px;
@@ -477,7 +479,6 @@ body {
 </head>
 <body>
 <div class="scanlines"></div>
-
 <div class="intro-wrap">
   <div class="noise"></div>
   <div class="noise noise-moving"></div>
