@@ -19,13 +19,10 @@ html {
 }
 
 
-
-
 body {
   position: relative;
   background: #181b34;
-  overflow: hidden;
-
+  margin: 0px;
   &:before {
     content: '';
     position: absolute;
@@ -46,7 +43,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: none;
   z-index: 400;
   opacity: .8;
   pointer-events: none;
@@ -100,13 +97,9 @@ body {
 }
 
 .intro-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
   width: 100vw;
-  height: 100vh;
 }
 
   .noise {
@@ -221,8 +214,7 @@ body {
   color:#999;
   text-transform: uppercase;
   font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
+  padding-top:100px;  
   width:100%;
   /*bottom:45%;*/
   display:block;
@@ -230,247 +222,30 @@ body {
   text-align:center;
 }
 
-#flip {
-  height:70px;
-  overflow:hidden;
-}
 
-#flip > div > div {
-  color:#fff;
-  font-size:55px;
-  padding:0px 25px;
-  height:70px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-@keyframes show {
-  0% {margin-top:0px;}
-  10% {margin-top:0px;}
-  20% {margin-top:-15px;}
-  40% {margin-top:-35px;}
-  60% {margin-top:-35px;}
-  80% {margin-top:-15px;}
-  90% {margin-top:0px;}
-  100% {margin-top:0px;}
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   h1{
     font-size:25px;
   }
-  #flip {
-    height:40px;
+   #container #mapaW{
+    display: none;
   }
-  #flip > div > div {
-    font-size:20px;
-    padding:4px 25px;
-    height:40px;
-    display:inline-block;
+    #container #mapaM{
+    display: block;
   }
-  @keyframes show {
-     0% {margin-top:0px;}
-    10% {margin-top:0px;}
-    20% {margin-top:-15px;}
-    40% {margin-top:-75px;}
-    60% {margin-top:-75px;}
-    80% {margin-top:-15px;}
-    90% {margin-top:0px;}
-    100% {margin-top:0px;}
+}
+
+@media screen and (min-width: 800px) {
+  #container #mapaW{
+    display: block;
+  }
+    #container #mapaM{
+    display: none;
   }
 }
 
 
-#load {
-  position:absolute;
-  width:600px;
-  height:36px;
-  left:50%;
-  top:80%;
-  margin-left:-300px;
-  overflow:visible;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  cursor:default;
-}
-
-#load div {
-  position:absolute;
-  width:20px;
-  height:36px;
-  opacity:0;
-  font-family:Helvetica, Arial, sans-serif;
-  animation:move 2s linear infinite;
-  -o-animation:move 2s linear infinite;
-  -moz-animation:move 2s linear infinite;
-  -webkit-animation:move 2s linear infinite;
-  transform:rotate(180deg);
-  -o-transform:rotate(180deg);
-  -moz-transform:rotate(180deg);
-  -webkit-transform:rotate(180deg);
-  color:#f26419;
-}
-
-#load div:nth-child(2) {
-  animation-delay:0.2s;
-  -o-animation-delay:0.2s;
-  -moz-animation-delay:0.2s;
-  -webkit-animation-delay:0.2s;
-}
-#load div:nth-child(3) {
-  animation-delay:0.4s;
-  -o-animation-delay:0.4s;
-  -webkit-animation-delay:0.4s;
-  -webkit-animation-delay:0.4s;
-}
-#load div:nth-child(4) {
-  animation-delay:0.6s;
-  -o-animation-delay:0.6s;
-  -moz-animation-delay:0.6s;
-  -webkit-animation-delay:0.6s;
-}
-#load div:nth-child(5) {
-  animation-delay:0.8s;
-  -o-animation-delay:0.8s;
-  -moz-animation-delay:0.8s;
-  -webkit-animation-delay:0.8s;
-}
-#load div:nth-child(6) {
-  animation-delay:1s;
-  -o-animation-delay:1s;
-  -moz-animation-delay:1s;
-  -webkit-animation-delay:1s;
-}
-#load div:nth-child(7) {
-  animation-delay:1.2s;
-  -o-animation-delay:1.2s;
-  -moz-animation-delay:1.2s;
-  -webkit-animation-delay:1.2s;
-}
-#load div:nth-child(8) {
-  animation-delay:1.4s;
-  -o-animation-delay:1.4s;
-  -moz-animation-delay:1.4s;
-  -webkit-animation-delay:1.4s;
-}
-#load div:nth-child(9) {
-  animation-delay:1.6s;
-  -o-animation-delay:1.6s;
-  -moz-animation-delay:1.6s;
-  -webkit-animation-delay:1.6s;
-}
-@keyframes move {
-  0% {
-    left:0;
-    opacity:0;
-  }
-  35% {
-    left: 41%; 
-    -moz-transform:rotate(0deg);
-    -webkit-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);
-    opacity:1;
-  }
-  65% {
-    left:59%; 
-    -moz-transform:rotate(0deg); 
-    -webkit-transform:rotate(0deg); 
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg); 
-    opacity:1;
-  }
-  100% {
-    left:100%; 
-    -moz-transform:rotate(-180deg); 
-    -webkit-transform:rotate(-180deg); 
-    -o-transform:rotate(-180deg); 
-    transform:rotate(-180deg);
-    opacity:0;
-  }
-}
-
-@-moz-keyframes move {
-  0% {
-    left:0; 
-    opacity:0;
-  }
-  35% {
-    left:41%; 
-    -moz-transform:rotate(0deg); 
-    transform:rotate(0deg);
-    opacity:1;
-  }
-  65% {
-    left:59%; 
-    -moz-transform:rotate(0deg); 
-    transform:rotate(0deg);
-    opacity:1;
-  }
-  100% {
-    left:100%; 
-    -moz-transform:rotate(-180deg); 
-    transform:rotate(-180deg);
-    opacity:0;
-  }
-}
-
-@-webkit-keyframes move {
-  0% {
-    left:0; 
-    opacity:0;
-  }
-  35% {
-    left:41%; 
-    -webkit-transform:rotate(0deg); 
-    transform:rotate(0deg); 
-    opacity:1;
-  }
-  65% {
-    left:59%; 
-    -webkit-transform:rotate(0deg); 
-    transform:rotate(0deg); 
-    opacity:1;
-  }
-  100% {
-    left:100%;
-    -webkit-transform:rotate(-180deg); 
-    transform:rotate(-180deg); 
-    opacity:0;
-  }
-}
-
-@-o-keyframes move {
-  0% {
-    left:0; 
-    opacity:0;
-  }
-  35% {
-    left:41%; 
-    -o-transform:rotate(0deg); 
-    transform:rotate(0deg); 
-    opacity:1;
-  }
-  65% {
-    left:59%; 
-    -o-transform:rotate(0deg); 
-    transform:rotate(0deg); 
-    opacity:1;
-  }
-  100% {
-    left:100%; 
-    -o-transform:rotate(-180deg); 
-    transform:rotate(-180deg); 
-    opacity:0;
-  }
-}
-
-h3 a, h3 a:hover, h3 a:active {
+h4 a, h4 a:hover, h4 a:active {
   color: #f26419;
 }
 
@@ -487,24 +262,14 @@ h3 a, h3 a:hover, h3 a:active {
   <div class="time">
      <span id="days">00</span>d<span id="hours">00</span>h<span id="minutes">00</span>m<span id="seconds">00</span>s
   </div>
-  <div id=container>
-    <h1>Tomamos el control de tu empresa</h1> 
-    <div id=flip>
-      <div><div style="background: #f20c2e">I caught</div></div>  
-      <div><div style="background: #2494a3">You</div></div>  
-      <div><div style="background: #f26419">Sybven & Soluciones Laser</div></div> 
-    </div>
-    <h3>Si estás del lado correcto de la historia,<br>sígueme en Ig: <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ese.t.x/">@ese.t.x</a></h3>
+  <div id="container">
+    <h2>Bitácora de los Bytes Perdidos</h2>
+    <center>
+      <img id="mapaW" src="mapaEmpresa.png" width="900px">
+      <img id="mapaM" src="mapaEmpresaM.png" width="100%">
+    </center>
+    <h4>Si estás del lado correcto de la historia,<br>sígueme en Ig: <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ese.t.x/">@ese.t.x</a></h4>
   </div>
-  <div id="load">
-    <div>G</div>
-    <div>N</div>
-    <div>I</div>
-    <div>D</div>
-    <div>A</div>
-    <div>O</div>
-    <div>L</div>
-  </div> 
   <div id="recordSpeed" class="recordSpeed">
     <div id="countdown">
     </div>
